@@ -8,13 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.2/semantic.min.css" integrity="sha256-pPbI0vDzgZ7JRdi3J6zdmBRMfDircVPDpH+sPWdf8nY=" crossorigin="anonymous">
 </head>
 <body>
-
-# added these lines.
-<% if current_user %>
-  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
-<% else %>
-  <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
-<% end %>
+<%= render 'layouts/navbar' %>
 
 <%= yield %>
 <%= render 'layouts/footer' %>
