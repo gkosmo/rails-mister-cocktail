@@ -16,6 +16,11 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'figaro'
+
+gem 'faker'
+
+ gem 'activerecord-session_store'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -25,7 +30,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
+
+ gem 'therubyracer', platforms: :ruby # or any other runtime
+ gem 'less-rails'
+ gem 'autoprefixer-rails'
+ gem 'semantic-ui-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

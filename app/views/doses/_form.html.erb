@@ -1,0 +1,12 @@
+<%= form_for([@cocktail,dose], remote: true ) do |f| %>
+<div class="field">
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+</div>
+<div class="field">
+  <%= f.collection_select(:ingredient_id,Ingredient.all, :id, :name) %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
+<% end %>
