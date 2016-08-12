@@ -13,16 +13,16 @@ class CocktailsController < ApplicationController
   def create
     puts cocktail_params
     @cocktail = Cocktail.create(cocktail_params)
-   puts @cocktail.id
+    puts @cocktail.id
     #  if @cocktail.save
-        redirect_to @cocktail
+    redirect_to @cocktail
     #  else
     #     render 'cocktails/new'
     #  end
   end
 
   def new
-  @cocktail = Cocktail.new
+    @cocktail = Cocktail.new
   end
   def destroy
     @cocktail.destroy
@@ -35,6 +35,6 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
   end
   def cocktail_params
-      params.require(:cocktail).permit(:name,:photo, :photo_cache )
+    params.require(:cocktail).permit(:name,:photo, :photo_cache )
   end
 end

@@ -2,14 +2,8 @@ class DosesController < ApplicationController
   before_action :set_dose, only: [ :destroy]
   before_action :set_cocktail, only: [:create, :destroy]
   def create
-     puts dose_params
      dose =   Dose.new(dose_params)
-    puts @cocktail.id
      dose[:cocktail_id] = @cocktail.id
-     puts dose.cocktail_id
-    puts dose.ingredient_id
-    puts dose.description
-    dose.save
     redirect_to @cocktail
   end
 
