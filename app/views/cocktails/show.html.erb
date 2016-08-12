@@ -1,19 +1,42 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
 
 
-<%= @cocktail.name %>
+<div class="jumbotron text-center" style=" background-color: blue">
+  <h1>  <%= @cocktail.name %>
+  </h1>
+</div>
+<div class="text-center">
+
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
+</div>
+<%= link_to 'Index', cocktails_path %>
+<div class="text-center">
 
 <% @cocktail.doses.each do |f| %>
+<div class="ui card">
 
 <p>
   <%= f.description %>
-</p>  <p>
+</p>
+ <p>
   <%= f.ingredient.name %>
   <%= link_to 'Destroy', cocktail_dose_path(@cocktail, f), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-
 </p>
+</div>
   <%end %>
+  </div>
 
-<%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
+<div class="row">
+  <div class="col-sm-offset-2">
+  <h3> Add a dose </h3>
+  <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-offset-5">
+
+    <%= image_tag @cocktail.photo.url(:bright_face) unless @cocktail.photo.url.nil? %>
+
+</div>
+  </div>

@@ -1,5 +1,4 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+
 <p id="notice"><%= notice %></p>
  <div class="jumbotron text-center">
 
@@ -18,7 +17,12 @@
   <tbody>
     <% @cocktails.each do |article| %>
       <tr>
+        <td>
+          <%= image_tag article.photo.url(:bright_face) unless article.photo.url.nil? %>
+
+        </td>
         <td><%= article.name %></td>
+
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

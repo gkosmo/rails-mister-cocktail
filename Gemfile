@@ -18,6 +18,10 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'figaro'
 
+gem 'carrierwave'
+
+gem 'cloudinary', '1.1.0'
+
 gem 'faker'
 
  gem 'activerecord-session_store'

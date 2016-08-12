@@ -3,7 +3,12 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
+<div class="field">
 
+    <%= f.file_field :photo %>
+    <%= f.hidden_field :photo_cache, as: :hidden %>
+
+</div>
 
 <div class="actions">
     <%= f.submit %>
