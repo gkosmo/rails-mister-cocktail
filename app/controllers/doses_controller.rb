@@ -4,6 +4,7 @@ class DosesController < ApplicationController
   def create
      dose =   Dose.new(dose_params)
      dose[:cocktail_id] = @cocktail.id
+     dose.save
     redirect_to @cocktail
   end
 
